@@ -1,3 +1,7 @@
+/*
+ * Style Hover Reducer
+ */
+
 import * as types from 'src/constans/styleHover';
 import { set, setInArray, push, deleteInArray } from 'src/utils/pure';
 

@@ -11,7 +11,8 @@
     "webpack-dev-server": "^2.5.0"
   },
   "scripts": {
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "nLines": "find src/. -name '*.js' -type f -print0 | xargs -0 cat | wc -l"
   },
   "author": "NickoBro",
   "license": "ISC"

@@ -1,3 +1,7 @@
+/*
+ * Style Reducer
+ */
+
 import * as types from 'src/constans/style';
 import { set, setInArray, push, deleteInArray } from 'src/utils/pure';
 
