@@ -6,7 +6,7 @@ import styleHover from './styleHover';
 import styleActive from './styleActive';
 
 export default combineReducers({
-	meta,
+  meta,
   style,
   styleHover,
   styleActive
