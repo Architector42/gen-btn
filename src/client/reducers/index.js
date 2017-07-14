@@ -4,7 +4,7 @@
 
 import { combineReducers } from 'redux';
 import button from './button';
-import undoable from './undoable';
+import undoable from './history';
 
 const buton = undoable(button);
 

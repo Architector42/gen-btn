@@ -1,8 +1,8 @@
 /*
- * Style Active Reducer
+ * Style Hover Reducer
  */
 
-import * as types from 'src/constans/styleActive';
+import * as types from 'src/client/constans/styleHover';
 import { set, setInArray, push, deleteInArray } from 'src/utils/pure';
 
 const initialState = {
@@ -40,7 +40,7 @@ const initialState = {
   shadow: [],
 };
 
-function styleActive(state = initialState, action) {
+function styleHover(state = initialState, action) {
   switch (action.type) {
     // *** fonts *** //
 
@@ -291,4 +291,4 @@ function styleActive(state = initialState, action) {
   }
 }
 
-export default styleActive;
+export default styleHover;

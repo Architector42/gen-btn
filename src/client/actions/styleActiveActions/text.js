@@ -3,7 +3,7 @@
  */
 
 import { bindActionCreators } from 'redux';
-import * as types from 'src/constans/styleActive';
+import * as types from 'src/client/constans/styleActive';
 
 // *** fonts *** //
 

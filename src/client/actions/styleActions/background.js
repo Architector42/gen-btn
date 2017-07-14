@@ -3,7 +3,7 @@
  */
 
 import { bindActionCreators } from 'redux';
-import * as types from 'src/constans/style';
+import * as types from 'src/client/constans/style';
 
 // *** background *** //
 

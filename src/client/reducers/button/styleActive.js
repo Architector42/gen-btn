@@ -1,19 +1,16 @@
 /*
- * Style Reducer
+ * Style Active Reducer
  */
 
-import * as types from 'src/constans/style';
+import * as types from 'src/client/constans/styleActive';
 import { set, setInArray, push, deleteInArray } from 'src/utils/pure';
 
 const initialState = {
-  fontFamily: 'Open Sans',
   fontSize: '16px',
-  fontStyle: '',
   fontWeight: '',
   textTransform: '',
   textDecoration: '',
   color: '#333333',
-  textAlign: '',
 
   textShadow: [],
 
@@ -24,7 +21,7 @@ const initialState = {
   padding: { top: '', right: '', bottom: '', left: '' },
 
   transformOrigin: {x: '', y: ''},
-  transform: {},
+  transform: [],
 
   background: '',
   opacity: '',
@@ -41,27 +38,14 @@ const initialState = {
   borderBottomRightRadius: '',
 
   shadow: [],
-
-  transitionProperty: [],
-  transitionTimingFunction: '',
-  transitionDuration: '',
-  transitionDelay: ''
 };
 
-function style(state = initialState, action) {
-
+function styleActive(state = initialState, action) {
   switch (action.type) {
-
     // *** fonts *** //
-
-    case types.SET_FONT:
-      return set(state, 'fontFamily', action.payload.font);
 
     case types.SET_FONT_SIZE:
       return set(state, 'fontSize', action.payload.size);
-
-    case types.SET_FONT_STYLE:
-      return set(state, 'fontStyle', action.payload.style);
 
     case types.SET_FONT_WEIGHT:
       return set(state, 'fontWeight', action.payload.weight);
@@ -74,9 +58,6 @@ function style(state = initialState, action) {
 
     case types.SET_TEXT_COLOR:
       return set(state, 'color', action.payload.color);
-
-    case types.SET_TEXT_ALIGN:
-      return set(state, 'textAlign', action.payload.align);
 
     // *** fonts shadows *** //
 
@@ -305,23 +286,9 @@ function style(state = initialState, action) {
         id: action.payload.id
       });
 
-    // *** transition *** //
-
-    case types.SET_TRANSITION_PROPERTY:
-      return push(state, 'transitionProperty', action.payload.property);
-
-    case types.SET_TRANSITION_TIMING_FUNCTION:
-      return set(state, 'transitionTimingFunction', action.payload.timingFunction);
-
-    case types.SET_TRANSITION_DURATION:
-      return set(state, 'transitionDuration', action.payload.duration);
-
-    case types.SET_TRANSITION_DELAY:
-      return set(state, 'transitionDelay', action.payload.delay);
-
     default:
       return state;
   }
 }
 
-export default style;
+export default styleActive;

@@ -1,5 +1,5 @@
 1. Rename comments
 2. Testing reducers
-3. Move actions in folder
-4. Create actions for history
-5. Rename history
+-3. Move actions in folder
+-4. Create actions for history
+-5. Rename history

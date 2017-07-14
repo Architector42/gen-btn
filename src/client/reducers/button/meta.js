@@ -2,7 +2,7 @@
  * Meta Reducer
  */
 
-import * as types from 'src/constans/buttonMeta';
+import * as types from 'src/client/constans/buttonMeta';
 import { set, setInArray, push, deleteInArray } from 'src/utils/pure';
 
 const initialState = {

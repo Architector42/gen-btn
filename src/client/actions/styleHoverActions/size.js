@@ -1,20 +1,20 @@
 /*
- * Size Style Actions Creators
+ * Size Style Hover Actions Creators
  */
 
 import { bindActionCreators } from 'redux';
-import * as types from 'src/constans/style';
+import * as types from 'src/client/constans/styleHover';
 
 // *** size *** //
 
-function setWidth(width) {
+function setHoverWidth(width) {
   return {
     type: types.SET_WIDTH,
     payload: { width }
   };
 }
 
-function setHeight(height) {
+function setHoverHeight(height) {
   return {
     type: types.SET_HEIGHT,
     payload: { height }
@@ -23,28 +23,28 @@ function setHeight(height) {
 
 // *** margin *** //
 
-function setMarginTop(margin) {
+function setHoverMarginTop(margin) {
   return {
     type: types.SET_MARGIN_TOP,
     payload: { margin }
   };
 }
 
-function setMarginRight(margin) {
+function setHoverMarginRight(margin) {
   return {
     type: types.SET_MARGIN_RIGHT,
     payload: { margin }
   };
 }
 
-function setMarginBottom(margin) {
+function setHoverMarginBottom(margin) {
   return {
     type: types.SET_MARGIN_BOTTOM,
     payload: { margin }
   };
 }
 
-function setMarginLeft(margin) {
+function setHoverMarginLeft(margin) {
   return {
     type: types.SET_MARGIN_LEFT,
     payload: { margin }
@@ -53,28 +53,28 @@ function setMarginLeft(margin) {
 
 // *** padding *** //
 
-function setPaddingTop(padding) {
+function setHoverPaddingTop(padding) {
   return {
     type: types.SET_PADDING_TOP,
     payload: { padding }
   };
 }
 
-function setPaddingRight(padding) {
+function setHoverPaddingRight(padding) {
   return {
     type: types.SET_PADDING_RIGHT,
     payload: { padding }
   };
 }
 
-function setPaddingBottom(padding) {
+function setHoverPaddingBottom(padding) {
   return {
     type: types.SET_PADDING_BOTTOM,
     payload: { padding }
   };
 }
 
-function setPaddingLeft(padding) {
+function setHoverPaddingLeft(padding) {
   return {
     type: types.SET_PADDING_LEFT,
     payload: { padding }
@@ -83,7 +83,7 @@ function setPaddingLeft(padding) {
 
 // *** transform *** //
 
-function setTransformOriginX(x) {
+function setHoverTransformOriginX(x) {
   return {
     type: types.SET_TRANSFORM_ORIGIN_X,
     payload: {
@@ -92,7 +92,7 @@ function setTransformOriginX(x) {
   }
 }
 
-function setTransformOriginY(y) {
+function setHoverTransformOriginY(y) {
   return {
     type: types.SET_TRANSFORM_ORIGIN_Y,
     payload: {
@@ -101,7 +101,7 @@ function setTransformOriginY(y) {
   }
 }
 
-function setTransformScaleX(x) {
+function setHoverTransformScaleX(x) {
   return {
     type: types.SET_TRANSFORM_SCALE_X,
     payload: {
@@ -110,7 +110,7 @@ function setTransformScaleX(x) {
   };
 }
 
-function setTransformScaleY(y) {
+function setHoverTransformScaleY(y) {
   return {
     type: types.SET_TRANSFORM_SCALE_Y,
     payload: {
@@ -119,21 +119,21 @@ function setTransformScaleY(y) {
   };
 }
 
-function setTransformSkewX(skew) {
+function setHoverTransformSkewX(skew) {
   return {
     type: types.SET_TRANSFORM_SKEW_X,
     payload: { skew }
   };
 }
 
-function setTransformSkewY(skew) {
+function setHoverTransformSkewY(skew) {
   return {
     type: types.SET_TRANSFORM_SKEW_Y,
     payload: { skew }
   };
 }
 
-function setTransformTranslateX(x) {
+function setHoverTransformTranslateX(x) {
   return {
     type: types.SET_TRANSFORM_TRANSLATE_X,
     payload: {
@@ -142,7 +142,7 @@ function setTransformTranslateX(x) {
   };
 }
 
-function setTransformTranslateY(y) {
+function setHoverTransformTranslateY(y) {
   return {
     type: types.SET_TRANSFORM_TRANSLATE_Y,
     payload: {
@@ -152,7 +152,7 @@ function setTransformTranslateY(y) {
 }
 
 
-function setTransformRotate(rotate) {
+function setHoverTransformRotate(rotate) {
   return {
     type: types.SET_TRANSFORM_ROTATE,
     payload: { rotate }
@@ -163,54 +163,53 @@ function setTransformRotate(rotate) {
 
 function containerActions(dispath) {
   return bindActionCreators({
-    setWidth,
-    setHeight,
+    setHoverWidth,
+    setHoverHeight,
 
-    setMarginTop,
-    setMarginRight,
-    setMarginBottom,
-    setMarginLeft,
+    setHoverMarginTop,
+    setHoverMarginRight,
+    setHoverMarginBottom,
+    setHoverMarginLeft,
 
-    setPaddingTop,
-    setPaddingRight,
-    setPaddingBottom,
-    setPaddingLeft,
+    setHoverPaddingTop,
+    setHoverPaddingRight,
+    setHoverPaddingBottom,
+    setHoverPaddingLeft,
 
-    setTransformOriginX,
-    setTransformOriginY,
-    setTransformScaleX,
-    setTransformScaleY,
-    setTransformSkewX,
-    setTransformSkewY,
-    setTransformTranslateX,
-    setTransformTranslateY,
-    setTransformRotate
+    setHoverTransformOriginX,
+    setHoverTransformOriginY,
+    setHoverTransformScaleX,
+    setHoverTransformScaleY,
+    setHoverTransformSkewY,
+    setHoverTransformTranslateX,
+    setHoverTransformTranslateY,
+    setHoverTransformRotate
   }, dispath);
 }
 
 export {
   containerActions,
 
-  setWidth,
-  setHeight,
+  setHoverWidth,
+  setHoverHeight,
 
-  setMarginTop,
-  setMarginRight,
-  setMarginBottom,
-  setMarginLeft,
+  setHoverMarginTop,
+  setHoverMarginRight,
+  setHoverMarginBottom,
+  setHoverMarginLeft,
 
-  setPaddingTop,
-  setPaddingRight,
-  setPaddingBottom,
-  setPaddingLeft,
+  setHoverPaddingTop,
+  setHoverPaddingRight,
+  setHoverPaddingBottom,
+  setHoverPaddingLeft,
 
-  setTransformOriginX,
-  setTransformOriginY,
-  setTransformScaleX,
-  setTransformScaleY,
-  setTransformSkewX,
-  setTransformSkewY,
-  setTransformTranslateX,
-  setTransformTranslateY,
-  setTransformRotate
+  setHoverTransformOriginX,
+  setHoverTransformOriginY,
+  setHoverTransformScaleX,
+  setHoverTransformScaleY,
+  setHoverTransformSkewX,
+  setHoverTransformSkewY,
+  setHoverTransformTranslateX,
+  setHoverTransformTranslateY,
+  setHoverTransformRotate
 }
